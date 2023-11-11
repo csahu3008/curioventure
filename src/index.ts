@@ -1,5 +1,6 @@
 
 import fastify from 'fastify'
+
 import {blogsData} from './data.js'
 const port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
 

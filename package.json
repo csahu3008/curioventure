@@ -6,7 +6,7 @@
     "start-ts": "ts-node src/index.ts",
     "build": "tsc -p tsconfig.json",
     "dev": "nodemon --watch src src/index.ts",
-    "start":"node build/index.js"
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "",
