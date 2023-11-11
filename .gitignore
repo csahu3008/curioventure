@@ -1,0 +1,32 @@
+/node_modules
+/.next/
+/out/
+
+# production
+/build
+build/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+### Node ###
+# Logs
+logs
+*.log
+# Dependency directories
+node_modules/
+
+# Next.js build output
+.next
+out

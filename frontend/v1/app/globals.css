@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: black;
+  color:white;
+}
+
+/* Base styles for mobile devices */
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Media query for screens wider than 576px (tablets and larger) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Media query for screens wider than 768px (small desktops and larger) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1280px; /* Adjust the max-width as needed for larger screens */
+  }
+}
+
+.bannerImage{
+  clip: rect(110px, 160px, 170px, 60px); /* or "auto" */
+
+}
+svg {
+  clip-path: url(#theSVGPath);
+}
