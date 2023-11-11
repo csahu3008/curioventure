@@ -1,8 +1,11 @@
 
 import fastify from 'fastify'
 import {blogsData} from './data.js'
+const port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
+
 // var blogsData=require('./data.js')
 const server = fastify()
+
 
 server.get('/', async (request, reply) => {
   return 'Hello there! 👋'
@@ -24,7 +27,7 @@ server.get('/posts/:id', async (request:any, reply) => {
 return post
 });
 
-server.listen({port:8080}, (err, address) => {
+server.listen({port:port}, (err, address) => {
   if (err) {
     console.error(err)
     process.exit(1)
