@@ -27,7 +27,7 @@ server.get('/posts/:id', async (request:any, reply) => {
 return post
 });
 
-server.listen({port:port}, (err, address) => {
+server.listen({port:port,host:'0.0.0.0'}, (err, address) => {
   if (err) {
     console.error(err)
     process.exit(1)
