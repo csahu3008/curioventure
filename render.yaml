@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: fastify-test
-    runtime: node
-    plan: free
-    autoDeploy: false
-    buildCommand: npm i 
-    startCommand: npm run start-ts
