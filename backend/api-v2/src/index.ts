@@ -9,7 +9,7 @@ const server = fastify()
 
 
 server.get('/', async (request, reply) => {
-  return 'Hello there! 👋'
+  return 'Hello there! 👋 From Version 2'
 })
 
 server.get('/posts', async (request, reply) => {
