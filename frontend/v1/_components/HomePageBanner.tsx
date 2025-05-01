@@ -8,22 +8,36 @@ function HomePageBanner() {
           <button className="py-2.5 px-5 rounded-full w-max border border-black tracking-wide">
             Curioventure
           </button>
-          <h1 className="text-3xl lg:text-6xl font-extrabold ">
-            Adventure into the tech world
+          <br />
+          <h1 className="text-3xl lg:text-6xl font-extrabold leading-9 flex gap-2 flex-wrap max-w-[600px]">
+            {[
+              "Curiosity",
+              ",",
+              "Adventure",
+              ",",
+              "Technology",
+              ",",
+              "Hobbies",
+              ",",
+              "Projects",
+            ].map((word, i) => (
+              <span
+                key={i}
+                className={`animated-word gradient-${i}`}
+                style={{ "--i": i }}
+              >
+                <span className="word">{word}</span>
+              </span>
+            ))}
           </h1>
+
           <button className="py-2.5 px-5 bg-[#284B63] text-white rounded-full w-full lg:w-max">
             Explore Now
           </button>
         </div>
         <div>
           <svg height="500" width="800" className="w-full lg:max-w-[800px]">
-            <image
-              href="../cd.png"
-              x="0"
-              y="0"
-              width="800"
-              height="500"
-            />
+            <image href="../cd.png" x="0" y="0" width="800" height="500" />
             <defs>
               <clipPath id="theSVGPath">
                 <rect

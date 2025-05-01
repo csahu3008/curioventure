@@ -46,9 +46,8 @@ function Features() {
         </h2>
         <div className="text-[#B4B8AB] flex flex-col gap-2 lg:flex-row lg:gap-8 text-sm lg:text-base">
           <p>
-            Embark on an adventure through the lens of technology, where we
-            delve into the intricacies of the digital world while keeping our
-            eyes peeled for the unimaginable.
+            Personal Journey of A Developer into learning new things,experiences
+            and various insights.
           </p>
           <p>
             Curioventure brings you stories that inspire, ignite curiosity, and

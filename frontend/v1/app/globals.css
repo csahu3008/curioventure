@@ -50,3 +50,66 @@ body {
 svg {
   clip-path: url(#theSVGPath);
 }
+.animated-word {
+  display: inline-block;
+  white-space: nowrap;
+  min-width: max-content;
+  position: relative;
+  animation: revealText 1.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.4s);
+  mask-image: linear-gradient(to right, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
+  mask-size: 200% 100%;
+  -webkit-mask-size: 200% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: right;
+  -webkit-mask-position: right;
+}
+
+@keyframes revealText {
+  0% {
+    mask-position: right;
+    -webkit-mask-position: right;
+  }
+  100% {
+    mask-position: left;
+    -webkit-mask-position: left;
+  }
+}
+
+.word {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* VIBGYOR gradients */
+.gradient-0 .word {
+  background-image: linear-gradient(to right, #8e24aa, #7b1fa2); /* Violet */
+}
+.gradient-1 .word {
+  background-image: linear-gradient(to right, #3f51b5, #3949ab); /* Indigo */
+}
+.gradient-2 .word {
+  background-image: linear-gradient(to right, #2196f3, #1e88e5); /* Blue */
+}
+.gradient-3 .word {
+  background-image: linear-gradient(to right, #43a047, #388e3c); /* Green */
+}
+.gradient-4 .word {
+  background-image: linear-gradient(to right, #fdd835, #fbc02d); /* Yellow */
+}
+.gradient-5 .word {
+  background-image: linear-gradient(to right, #fb8c00, #f57c00); /* Orange */
+}
+.gradient-6 .word {
+  background-image: linear-gradient(to right, #e53935, #d32f2f); /* Red */
+}
+.gradient-7 .word {
+  background-image: linear-gradient(to right, #8e24aa, #7b1fa2); /* Violet (loop) */
+}
+.gradient-8 .word {
+  background-image: linear-gradient(to right, #3f51b5, #3949ab); /* Indigo (loop) */
+}
