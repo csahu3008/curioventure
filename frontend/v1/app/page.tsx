@@ -12,6 +12,9 @@ const title =
 export const metadata: Metadata = {
   title: title,
   description: description,
+  alternates:{
+    canonical:'https://curioventure.xyz/',
+  },
   robots: {
     index: true,
     follow: true,
