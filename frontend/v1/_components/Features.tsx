@@ -16,10 +16,52 @@ const techFeaturesData = [
     img_url: "tech1.jpg",
   },
   {
+    title: "Pixel Art Canvas",
+    embedUrl: "https://pixel-art.curioventure.xyz",
+    content: "Simply Select a color and draw whatever you like in the canvas.",
+    img_url: "tech1.jpg",
+  },
+  {
+    title: "Calendar Slot Booking",
+    embedUrl: "https://calender-slots.curioventure.xyz",
+    content:
+      "I’ve built a frontend web application that allows users to select specific time slots. I created it as part of my practice with DOM manipulation.",
+    img_url: "untaned.jpg",
+  },
+   {
     title: "Credit Card Form",
     embedUrl: "https://learn.curioventure.xyz/creditcard",
     content:
       "Here I have tried to create an UI for Credit Card form.the goal here was to learn animations using react.inspiration is taken from codepen.io example which was created on VueJs(https://codepen.io/JavaScriptJunkie/pen/YzzNGeR)",
+    img_url: "deep_dive.jpg",
+  },
+  {
+    title: "3D Fan Animation",
+    embedUrl: "https://fan.curioventure.xyz/",
+    content:
+      "A fun web application where I recreated the look and functionality of a real fan.",
+    img_url: "tech1.jpg",
+  },
+  {
+    title: "Tic Tac Toe Game",
+    embedUrl: "https://tic-tac-toe.curioventure.xyz/",
+    content:
+      "A small classical game that i created using react where the major focus was on game logic than UI.",
+    img_url: "deep_dive.jpg",
+  },
+  
+  {
+    title: "Scroll Animation with Intersection Observer",
+    embedUrl: "https://scroll-animation.curioventure.xyz/",
+    content:
+      "A small web application that i created while practicing intersection observer. I was fascinated by how scroll animations work. It was a great experience while working on this project.",
+    img_url: "sky.jpg",
+  },
+  {
+    title: "3D Transform Playground",
+    embedUrl: "https://3d-transforms.curioventure.xyz",
+    content:
+      "Basically a playground where i tested out css 3d-transforms and animations.",
     img_url: "deep_dive.jpg",
   },
   {
@@ -36,10 +78,11 @@ const techFeaturesData = [
       "Actually this from what i can remember is the above ui was one of the task at frontend masters.Just Created it for fun and to learn more about react and UI development.",
     img_url: "untaned.jpg",
   },
+  
 ];
 function Features() {
   return (
-    <div className="container flex flex-col gap-5 lg:py-5">
+    <div id="features" className="container flex flex-col gap-5 lg:py-5">
       <div>
         <h2 className="mb-4 lg:mb-6 text-2xl lg:text-3xl font-black tracking-wider">
           Unravel the Wonders

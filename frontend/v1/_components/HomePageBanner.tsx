@@ -2,7 +2,7 @@ import React from "react";
 
 function HomePageBanner() {
   return (
-    <div className="bg-[#b4b8ab] text-black lg:h-[100vh]">
+    <div className="relative bg-[#b4b8ab] text-black lg:h-[100vh]">
       <div className="container flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-10">
         <div className="flex flex-col justify-center items-center lg:items-start gap-3 lg:gap-7">
           <button className="py-2.5 px-5 rounded-full w-max border border-black tracking-wide">
@@ -31,9 +31,12 @@ function HomePageBanner() {
             ))}
           </h1>
 
-          <button className="py-2.5 px-5 bg-[#284B63] text-white rounded-full w-full lg:w-max">
+          <a
+            href="#features"
+            className="py-2.5 px-5 bg-[#284B63] text-white rounded-full w-full lg:w-max "
+          >
             Explore Now
-          </button>
+          </a>
         </div>
         <div>
           <svg height="500" width="800" className="w-full lg:max-w-[800px]">
@@ -109,6 +112,9 @@ function HomePageBanner() {
           </svg>
         </div>
       </div>
+      {/* <form method="get" action="/dummy-pdf_2.pdf" target="_blank">
+        <button className="absolute mt-2 bottom-10 left-1/2 -translate-x-1/2 p-2.5 outline-0 border border-blue-600 text-white bg-black hover:bg-blue-900 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-md" type="submit">View My Resume!</button>
+      </form> */}
     </div>
   );
 }

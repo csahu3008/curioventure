@@ -3,17 +3,39 @@ import HomePageBanner from "@/_components/HomePageBanner";
 import Quotes from "@/_components/Quotes";
 import React from "react";
 import type { Metadata } from "next";
-const title =
-    "Curioventure , My Journey into Tech Adventures,Explorations and Hobbies",
-  description =
-    "Curioventure is a platform where i share my learnings and experiences mostly focussed on Tech and sometimes insights on things i find interesting.",
-  canonical = "https://curioventure.xyz/";
 
+// Schema.org type definitions
+interface Creator {
+  "@type": "Person";
+  name: string;
+}
+
+interface WebAppSchema {
+  "@context"?: "https://schema.org";
+  "@type": "WebApplication";
+  name: string;
+  operatingSystem: string;
+  applicationCategory: string;
+  description: string;
+  creator: Creator;
+  url: string;
+  featureList: string[];
+  isBasedOn?: string;
+}
+
+// Constants
+const title =
+  "Curioventure - My Journey into Tech Adventures, Explorations and Hobbies";
+const description =
+  "Curioventure is a platform where I share my learnings and experiences, mostly focused on Tech and sometimes insights on things I find interesting.";
+const canonical = "https://curioventure.xyz/";
+
+// Metadata configuration
 export const metadata: Metadata = {
-  title: title,
-  description: description,
-  alternates:{
-    canonical:'https://curioventure.xyz/',
+  title,
+  description,
+  alternates: {
+    canonical: "https://curioventure.xyz/",
   },
   robots: {
     index: true,
@@ -30,44 +52,151 @@ export const metadata: Metadata = {
   },
 };
 
+// Type definitions
+type Creator = {
+  "@type": "Person";
+  name: string;
+};
+
+type WebAppSchema = {
+  "@context"?: "https://schema.org";
+  "@type": "WebApplication";
+  name: string;
+  operatingSystem: string;
+  applicationCategory: string;
+  description: string;
+  creator: Creator;
+  url: string;
+  featureList: string[];
+  isBasedOn?: string;
+};
+
+interface WebAppSchema {
+  "@context"?: "https://schema.org";
+  "@type": "WebApplication";
+  name: string;
+  operatingSystem: string;
+  applicationCategory: string;
+  description: string;
+  creator: {
+    "@type": "Person";
+    name: string;
+  };
+  url: string;
+  featureList: string[];
+  isBasedOn?: string;
+}
+
+type Creator = {
+  "@type": "Person";
+  name: string;
+};
+
+type WebAppSchema = {
+  "@context"?: "https://schema.org";
+  "@type": "WebApplication";
+  name: string;
+  operatingSystem: string;
+  applicationCategory: string;
+  description: string;
+  creator: Creator;
+  url: string;
+  featureList: string[];
+  isBasedOn?: string;
+};
+
 const Home: React.FC = () => {
-  const projectsData = [
+  const projectsData: WebAppSchema[] = [
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "Todo with Drag and Drop",
+      name: "Interactive Todo with Drag and Drop",
       operatingSystem: "All",
       applicationCategory: "ProductivityApplication",
       description:
-        "A web app where i had tried to implement drag and drop functionality in react by creating Todo Application.i have not used any third party libraries for implementing drag and drop functionality.",
+        "A web app where I implemented drag and drop functionality in React by creating a Todo Application. I have not used any third party libraries for implementing the drag and drop functionality.",
       creator: {
         "@type": "Person",
-        name: "Your Name",
+        name: "CS",
       },
       url: "https://todo.curioventure.xyz/",
       featureList: [
-        "Drag and drop support",
-        "Custom implementation without external libraries",
-        "Built with React",
+        "Custom drag and drop implementation",
+        "React-based task management",
+        "No external drag-drop libraries",
       ],
     },
     {
       "@type": "WebApplication",
-      name: "Ecommerce Website",
+      name: "3D Fan Animation",
+      operatingSystem: "All",
+      applicationCategory: "DemoApplication",
+      description:
+        "A fun web application where I recreated the look and functionality of a real fan.",
+      creator: {
+        "@type": "Person",
+        name: "CS",
+      },
+      url: "https://fan.curioventure.xyz/",
+      featureList: [
+        "3D CSS transforms",
+        "Realistic fan animation",
+        "Interactive controls",
+      ],
+    },
+    {
+      "@type": "WebApplication",
+      name: "3D Transform Playground",
+      operatingSystem: "All",
+      applicationCategory: "DemoApplication",
+      description:
+        "A playground where I tested out CSS 3D-transforms and animations.",
+      creator: {
+        "@type": "Person",
+        name: "CS",
+      },
+      url: "https://3d-transforms.curioventure.xyz",
+      featureList: [
+        "Interactive 3D transformations",
+        "CSS animation examples",
+        "Educational playground",
+      ],
+    },
+    {
+      "@type": "WebApplication",
+      name: "Calendar Slot Booking",
+      operatingSystem: "All",
+      applicationCategory: "UtilityApplication",
+      description:
+        "A frontend web application that allows users to select specific time slots, created for practicing DOM manipulation.",
+      creator: {
+        "@type": "Person",
+        name: "CS",
+      },
+      url: "https://calender-slots.curioventure.xyz",
+      featureList: [
+        "Interactive time slot selection",
+        "DOM manipulation showcase",
+        "User-friendly calendar interface",
+      ],
+    },
+    {
+      "@type": "WebApplication",
+      name: "E-commerce Platform Demo",
       operatingSystem: "All",
       applicationCategory: "ShoppingApplication",
       description:
-        "A Web App where i had tried to implement Ecommerce website using React.I have tried to create replica of a website i came across while learning react and ui development.currently i dont remember the reference of the actual one but will add it if i found it out",
+        "A web application implementing a modern e-commerce platform using React. Features a responsive design and comprehensive shopping experience with product listings and cart functionality.",
       creator: {
         "@type": "Person",
-        name: "Your Name",
+        name: "CS",
       },
       url: "https://learn.curioventure.xyz/hphones",
       featureList: [
-        "Product listings",
-        "Cart and checkout UI",
-        "Responsive design",
-        "Inspired by real ecommerce layout",
+        "Product catalog with filters",
+        "Shopping cart and checkout flow",
+        "Responsive mobile-first design",
+        "Modern e-commerce UI patterns",
       ],
     },
     {
@@ -79,7 +208,7 @@ const Home: React.FC = () => {
         "Here I have tried to create an UI for Credit Card form.the goal here was to learn animations using react.inspiration is taken from codepen.io example which was created on VueJs(https://codepen.io/JavaScriptJunkie/pen/YzzNGeR)",
       creator: {
         "@type": "Person",
-        name: "Your Name",
+        name: "CS",
       },
       url: "https://learn.curioventure.xyz/creditcard",
       featureList: [
@@ -98,7 +227,7 @@ const Home: React.FC = () => {
         "Here I have tried to create an UI for Cart Functionality.the goal here was to learn state management using react.",
       creator: {
         "@type": "Person",
-        name: "Your Name",
+        name: "CS",
       },
       url: "https://learn.curioventure.xyz/cart",
       featureList: [
@@ -116,7 +245,7 @@ const Home: React.FC = () => {
         "Actually this from what i can remember is the above ui was one of the task at frontend masters.Just Created it for fun and to learn more about react and UI development.",
       creator: {
         "@type": "Person",
-        name: "Your Name",
+        name: "CS",
       },
       url: "https://learn.curioventure.xyz/comments",
       featureList: [
