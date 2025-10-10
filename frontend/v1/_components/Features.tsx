@@ -1,6 +1,13 @@
 import Link from "next/link";
 import React from "react";
 const techFeaturesData = [
+   {
+    title: "Awesome Code Snippets",
+    embedUrl: "https://awesomecodesnippets-v1.curioventure.xyz",
+    content:
+      "Developed a full-stack Django web application for code snippet sharing with multiple language support, user authentication, commenting system, and rating functionality. Features include syntax highlighting, bookmark management, and responsive design. built with with modern web technologies including Python, Django, JavaScript, and Bulma CSS.inspiration was to create a website similar to https://carbon.now.sh/ but with some extended functionality.",
+    img_url: "tech1.jpg",
+  },
   {
     title: "Todo with Drag and Drop",
     embedUrl: "https://todo.curioventure.xyz/",

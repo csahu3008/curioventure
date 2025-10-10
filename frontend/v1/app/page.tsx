@@ -4,25 +4,6 @@ import Quotes from "@/_components/Quotes";
 import React from "react";
 import type { Metadata } from "next";
 
-// Schema.org type definitions
-interface Creator {
-  "@type": "Person";
-  name: string;
-}
-
-interface WebAppSchema {
-  "@context"?: "https://schema.org";
-  "@type": "WebApplication";
-  name: string;
-  operatingSystem: string;
-  applicationCategory: string;
-  description: string;
-  creator: Creator;
-  url: string;
-  featureList: string[];
-  isBasedOn?: string;
-}
-
 // Constants
 const title =
   "Curioventure - My Journey into Tech Adventures, Explorations and Hobbies";
@@ -52,24 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Type definitions
-type Creator = {
-  "@type": "Person";
-  name: string;
-};
-
-type WebAppSchema = {
-  "@context"?: "https://schema.org";
-  "@type": "WebApplication";
-  name: string;
-  operatingSystem: string;
-  applicationCategory: string;
-  description: string;
-  creator: Creator;
-  url: string;
-  featureList: string[];
-  isBasedOn?: string;
-};
 
 interface WebAppSchema {
   "@context"?: "https://schema.org";
@@ -92,21 +55,30 @@ type Creator = {
   name: string;
 };
 
-type WebAppSchema = {
-  "@context"?: "https://schema.org";
-  "@type": "WebApplication";
-  name: string;
-  operatingSystem: string;
-  applicationCategory: string;
-  description: string;
-  creator: Creator;
-  url: string;
-  featureList: string[];
-  isBasedOn?: string;
-};
 
 const Home: React.FC = () => {
   const projectsData: WebAppSchema[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      name: "Awesome Code Snippets",
+      operatingSystem: "All",
+      applicationCategory: "DeveloperApplication",
+      description: "A full-stack Django web application for code snippet sharing with multiple language support, user authentication, commenting system, and rating functionality. Features include syntax highlighting, bookmark management, and responsive design. Built with modern web technologies including Python, Django, JavaScript, and Bulma CSS.",
+      creator: {
+        "@type": "Person",
+        name: "CS",
+      },
+      url: "https://awesomecodesnippets-v1.curioventure.xyz/",
+      featureList: [
+        "Syntax highlighting for multiple languages",
+        "User authentication system",
+        "Comment and rating functionality",
+        "Bookmark management",
+        "Responsive design with Bulma CSS",
+      ],
+      isBasedOn: "https://carbon.now.sh/",
+    },
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
