@@ -2,6 +2,13 @@ import Link from "next/link";
 import React from "react";
 const techFeaturesData = [
    {
+    title: "Awesome Code Snippets (Revamp)",
+    embedUrl: "https://awesomecodesnippets-v2.curioventure.xyz",
+    content:
+      "I recently gave the original Awesome Code Snippets a complete revamp — now it’s running on a modern Next.js + Django stack. I leaned on AI tools to handle repetitive bits and speed up code generation, and integrated NextAuth for smooth, secure user sign-ins. With the site up and running, I’m now deep into performance tuning — experimenting, tweaking, and learning how to make it faster, more scalable, and just feel better to use.",
+    img_url: "tech1.jpg",
+  },
+   {
     title: "Awesome Code Snippets",
     embedUrl: "https://awesomecodesnippets-v1.curioventure.xyz",
     content:

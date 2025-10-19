@@ -33,7 +33,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 interface WebAppSchema {
   "@context"?: "https://schema.org";
   "@type": "WebApplication";
@@ -55,7 +54,6 @@ type Creator = {
   name: string;
 };
 
-
 const Home: React.FC = () => {
   const projectsData: WebAppSchema[] = [
     {
@@ -64,7 +62,44 @@ const Home: React.FC = () => {
       name: "Awesome Code Snippets",
       operatingSystem: "All",
       applicationCategory: "DeveloperApplication",
-      description: "A full-stack Django web application for code snippet sharing with multiple language support, user authentication, commenting system, and rating functionality. Features include syntax highlighting, bookmark management, and responsive design. Built with modern web technologies including Python, Django, JavaScript, and Bulma CSS.",
+      description:
+        "Awesome Code Snippets is a full-stack web app rebuilt using Next.js and Django, designed for sharing, organizing, and exploring code snippets with syntax highlighting, user authentication, and AI-assisted features. The platform emphasizes performance, scalability, and a seamless developer experience.",
+      creator: {
+        "@type": "Person",
+        name: "CS",
+      },
+      url: "https://awesomecodesnippets-v2.curioventure.xyz/",
+      featureList: [
+        "Full-stack Next.js + Django architecture",
+        "AI-assisted code generation and automation",
+        "NextAuth-based user authentication",
+        "Syntax highlighting and snippet categorization",
+        "Performance-optimized and scalable design",
+        "Responsive UI with modern styling",
+        "Bookmarking, commenting, and rating system",
+      ],
+      isBasedOn: "https://carbon.now.sh/",
+      keywords: [
+        "Next.js",
+        "Django",
+        "NextAuth",
+        "AI tools",
+        "Code snippets",
+        "Developer platform",
+        "Full-stack web app",
+      ],
+      softwareVersion: "2.0",
+      releaseNotes:
+        "Revamped to modern Next.js + Django stack with NextAuth integration and performance optimization.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      name: "Awesome Code Snippets",
+      operatingSystem: "All",
+      applicationCategory: "DeveloperApplication",
+      description:
+        "A full-stack Django web application for code snippet sharing with multiple language support, user authentication, commenting system, and rating functionality. Features include syntax highlighting, bookmark management, and responsive design. Built with modern web technologies including Python, Django, JavaScript, and Bulma CSS.",
       creator: {
         "@type": "Person",
         name: "CS",
