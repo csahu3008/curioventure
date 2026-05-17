@@ -122,7 +122,7 @@ function HomePageBannerV2() {
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
-            href="/dummy-pdf_2.pdf"
+            href="https://rxresu.me/1103css/chandra-shekhar-frontend"
             download
             className="inline-flex min-h-12 items-center justify-center rounded bg-[#ff654c] px-5 py-3 text-sm font-bold text-white shadow-[0_12px_34px_rgba(255,101,76,0.2)] transition hover:bg-[#ff765f] focus:outline-none focus:ring-2 focus:ring-[#ffb36b] focus:ring-offset-2 focus:ring-offset-[#20182e]"
           >
