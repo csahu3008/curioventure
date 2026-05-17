@@ -1,22 +1,51 @@
 import Features from "@/_components/Features";
-import HomePageBanner from "@/_components/HomePageBanner";
-import Quotes from "@/_components/Quotes";
+import ContactSection from "@/_components/ContactSection";
+import ExperienceSection from "@/_components/ExperienceSection";
+import HomePageBannerV2 from "@/_components/HomePageBannerV2";
+import SkillsShowcase from "@/_components/SkillsShowcase";
 import React from "react";
 import type { Metadata } from "next";
 
 // Constants
-const title =
-  "Curioventure - My Journey into Tech Adventures, Explorations and Hobbies";
+const title = "Curioventure | Web Engineer Portfolio";
 const description =
-  "Curioventure is a platform where I share my learnings and experiences, mostly focused on Tech and sometimes insights on things I find interesting.";
+  "Web Engineer portfolio of Chandra Shekhar, focused on React, Next.js, TypeScript, Vue/Nuxt, Astro, Core Web Vitals, SSR/SSG, API integrations, and production web applications.";
 const canonical = "https://curioventure.xyz/";
 
 // Metadata configuration
 export const metadata: Metadata = {
   title,
   description,
+  keywords: [
+    "Web Engineer",
+    "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Vue.js",
+    "Nuxt.js",
+    "Astro",
+    "Core Web Vitals",
+    "Web Performance",
+    "SSR",
+    "SSG",
+    "Portfolio",
+    "Web Developer",
+  ],
   alternates: {
     canonical: "https://curioventure.xyz/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: canonical,
+    siteName: "Curioventure",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
   },
   robots: {
     index: true,
@@ -47,12 +76,10 @@ interface WebAppSchema {
   url: string;
   featureList: string[];
   isBasedOn?: string;
+  keywords?: string[];
+  softwareVersion?: string;
+  releaseNotes?: string;
 }
-
-type Creator = {
-  "@type": "Person";
-  name: string;
-};
 
 const Home: React.FC = () => {
   const projectsData: WebAppSchema[] = [
@@ -268,10 +295,24 @@ const Home: React.FC = () => {
     name: title,
     description: description,
     url: canonical,
-    // author: {
-    //   "@type": "Person",
-    //   name: "Your Name",
-    // },
+    author: {
+      "@type": "Person",
+      name: "Chandra Shekhar",
+      url: "https://www.linkedin.com/in/chandra-shekhar-sahu-331327203",
+      jobTitle: "Web Engineer",
+      knowsAbout: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Vue.js",
+        "Nuxt.js",
+        "Astro",
+        "Core Web Vitals",
+        "SSR",
+        "SSG",
+        "Web Performance",
+      ],
+    },
     hasPart: projectsData.map((project) => ({
       "@type": "WebPage",
       isPartOf: {
@@ -289,11 +330,15 @@ const Home: React.FC = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
-      <div>
-        <HomePageBanner />
-        <Features />
-        <Quotes />
-      </div>
+      <main className="min-h-screen bg-[#000] px-0 py-0 text-white sm:px-5 sm:py-5">
+        <div className="mx-auto max-w-[1440px] overflow-hidden sm:rounded">
+          <HomePageBannerV2 />
+          <SkillsShowcase />
+          <ExperienceSection />
+          <Features />
+          {/* <ContactSection /> */}
+        </div>
+      </main>
     </>
   );
 };
